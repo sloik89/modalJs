@@ -1,0 +1,108 @@
+:root{
+    --warning:rgb(234,162,18);
+    --info:rgb(75,113,227);
+    --danger:#e7514f;
+    --success:#37b868;
+}
+* {
+    padding: 0;
+    margin:0;
+    box-sizing: border-box;
+}
+body{
+    min-height: 200vh;
+}
+.nav{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    max-width: 1000px;
+    margin:0 auto;
+   
+}
+.nav-btns{
+
+}
+.logo{
+    font-size: 25px;
+    text-decoration: none;
+    text-transform: capitalize;
+    color:salmon;
+    padding: 10px 0;
+}
+.modal-container{
+    width: 100vw;
+    height: 100vh;
+    position: absolute;
+    top:0;
+    left:0;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    backdrop-filter: blur(2px);
+}
+.modal{
+    border-radius: 20px;
+   position: relative;
+    width: 700px;
+    min-height: 250px;
+    padding: 20px 40px 30px 20px;
+    box-shadow: rgba(0, 0, 0, 0.35) 0px 5px 15px;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+}
+.circle-icon{
+    margin-bottom: 5px;
+    width: 30px;
+    height: 35px;
+    
+}
+.modal-title{
+    font-weight: bold;
+    font-size: 2rem;
+    margin:10px 0;
+    display: flex;
+    align-items: center;
+    gap:15px;
+    color:var(--info);
+}
+.modal-title.danger{
+    color:var(--danger);
+}
+.modal-title.success {
+    color:var(--success)
+}
+.modal-buttons button{
+    padding: 8px;
+    width: 130px;
+    margin-top: 25px;
+    margin-right: 20px;
+    border-radius: 10px;
+    border:none;
+    color:white;
+    cursor: pointer;
+    transition: all 0.3s linear;
+}
+.modal-buttons button:hover{
+    opacity: 0.8;
+}
+.modal-accept{
+    background: var(--success);
+}
+.modal-decline{
+    background: var(--danger);
+}
+.modal-close-btn{
+    position: absolute;
+    top:10px;
+    right: 10px;
+    background: none;
+    border:none;
+    cursor: pointer;
+    
+}
+.modal-close-btn i {
+    width: 50px;
+    height: 50px;
+}
